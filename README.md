@@ -17,3 +17,10 @@ para atributos usa {{ }}
 expressão [ ]
 
 npm install bootstrap@4.1.1
+importado em angular.json
+"styles": [ "./node_modules/bootstrap/dist/css/bootstrap.min.css" ],
+
+OBS: todo component deve estar em um module
+
+A propriedade @Input() permite que o componente receba valores externos
+
