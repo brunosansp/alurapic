@@ -1,3 +1,4 @@
-<!-- <h1>{{ title }}</h1> -->
-<ap-photo url="https://www.collinsdictionary.com/images/full/sunset_390537568_1000.jpg?version=4.0.103" description="Sunset"></ap-photo>
-<ap-photo url="https://static.wixstatic.com/media/71a6c2_37f9d88c8d4d460385fbd2793de7ad5d~mv2.png" description="Sunset1"></ap-photo>
+<h1>{{ title }}</h1>
+<ap-photo *ngFor="let photo of photos" [url]="photo.url" [description]="photo.description">
+
+</ap-photo>

@@ -24,3 +24,8 @@ OBS: todo component deve estar em um module
 
 A propriedade @Input() permite que o componente receba valores externos
 
+Ao declarar um Component em um Module tbm é necessário explicitá-lo com exports.
+    @NgModule({
+        declarations: [ PhotoComponent ],
+        exports: [ PhotoComponent ]
+    })
