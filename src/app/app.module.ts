@@ -8,10 +8,7 @@ import { PhotosModule } from './photos/photos.module';
   declarations: [
     AppComponent,
   ],
-  imports: [
-    BrowserModule,
-    PhotosModule
-  ],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent]
 })
