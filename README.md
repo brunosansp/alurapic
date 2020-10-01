@@ -29,3 +29,8 @@ Ao declarar um Component em um Module tbm é necessário explicitá-lo com expor
         declarations: [ PhotoComponent ],
         exports: [ PhotoComponent ]
     })
+
+Fazendo a integração com back-end via HttpClient.
+Para usar o HttpClient é necessário fazer injeção de dependência:
+    - Após adicionarmos o import em nosso app.module.ts, precisamos importar em nosso component o seguinte: import {HttpClient} from '@angular/common/http';
+
