@@ -33,3 +33,8 @@ Permite que o componente receba valores externos quando usado na forma declarati
 # Diretiva *ngFor
 Serve para varrer um array montando cada item do componente a ser exibido
 
+
+# HttpClient e injeção de dependência para comunicação com a WEB API
+Após adicionarmos o import em nosso app.module.ts, precisamos importar em nosso component o seguinte: import {HttpClient} from '@angular/common/http';
+
+
