@@ -6,11 +6,13 @@ import { PhotosModule } from './photos/photos.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    PhotosModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
- 
