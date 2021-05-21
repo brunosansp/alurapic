@@ -1,23 +1,20 @@
-import { Component } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Component } from '@angular/core';
+import { PhotoService } from './photos/photo/photo.service';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   photos: Object[] = [];
 
-  constructor(http: HttpClient) {
-    console.log(http);
+  constructor(photoService: PhotoService) {
 
     // const observable = http.get('http://localhost:3000/flavio/photos')
     // observable.subscribe()
-    http
-      .get<Object[]>("http://localhost:3000/flavio/photos")
-      .subscribe(
-        photos => this.photos = photos
-    );
+    photoService
+      .listFromUser('flavio')
+      .subscribe(photos => this.photos = photos);
   }
 }
