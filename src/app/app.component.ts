@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PhotoService } from './photos/photo/photo.service';
 
 @Component({
@@ -6,15 +6,20 @@ import { PhotoService } from './photos/photo/photo.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  photos: Object[] = [];
+export class AppComponent implements OnInit {
 
-  constructor(photoService: PhotoService) {
+  photos: any[] = [];
 
-    // const observable = http.get('http://localhost:3000/flavio/photos')
-    // observable.subscribe()
-    photoService
-      .listFromUser('flavio')
-      .subscribe(photos => this.photos = photos);
+  constructor(private photoService: PhotoService) { }
+
+  ngOnInit(): void {
+    try {
+      this.photoService
+        .listFromUser('flavio')
+        .subscribe(photos => this.photos = photos);
+    } catch (error) {
+      console.error(error);
+      throw new Error('Method not implemented.');
+    }
   }
 }
