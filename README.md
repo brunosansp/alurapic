@@ -38,3 +38,9 @@ Serve para varrer um array montando cada item do componente a ser exibido
 Após adicionarmos o import em nosso app.module.ts, precisamos importar em nosso component o seguinte: import {HttpClient} from '@angular/common/http';
 
 
+# Criando novo componente, photo-list
+ng generate component photo/photo-list
+<!-- Todo component possui @NgModule -->
+
+# Criando novo componente, photo-form
+ng generate component photos/photo-form
