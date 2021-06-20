@@ -44,3 +44,6 @@ ng generate component photos/photo-form
 
 # Criando novo componente, load-button
 ng g c photos/photo-list/load-button
+
+# Instalação font-awesome
+npm install font-awesome@4.7.0
